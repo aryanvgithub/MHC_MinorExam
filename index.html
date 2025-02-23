@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Limited - L&D Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background: #121212;
+            color: #e0e0e0;
+        }
+        .sidebar {
+            width: 250px;
+            background: #1e1e1e;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff9800;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            padding: 12px;
+            margin: 10px 0;
+            background: #333;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar ul li:hover {
+            background: #ff9800;
+            color: #121212;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+        .section {
+            background: #1e1e1e;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .module-card {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+        }
+        .module-card:hover {
+            transform: scale(1.05);
+            background: #ff9800;
+            color: #121212;
+        }
+        .chatbot {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 300px;
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .chatbot h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #ff9800;
+        }
+        .popup {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff9800;
+            color: #121212;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">Hello User! Welcome to A Limited's L&D Platform</div>
+    <div class="sidebar">
+        <h2>A Limited L&D</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Learning Modules</li>
+            <li>Challenges</li>
+            <li>Progress</li>
+            <li>Admin Panel</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="section">
+            <h3>Dashboard</h3>
+            <p>Welcome to A Limited's learning platform. Track your progress and explore modules.</p>
+        </div>
+        <div class="section">
+            <h3>Learning Modules</h3>
+            <div class="grid">
+                <div class="module-card">Network Protocols</div>
+                <div class="module-card" onclick="location.href='wireshark_game.html';" style="cursor:pointer;">Wireshark Basics</div>
+                <div class="module-card">Java for Legacy Systems</div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Challenges & Simulations</h3>
+            <p>Hands-on coding tasks based on real-world telecom scenarios.</p>
+        </div>
+        <div class="section">
+            <h3>User Progress</h3>
+            <p>Graphical representation of learning progress.</p>
+        </div>
+        <div class="section">
+            <h3>Admin Panel</h3>
+            <p>Track employee training, assign modules, and generate reports.</p>
+        </div>
+    </div>
+    <div class="chatbot">
+        <h3>AI Chat Bot</h3>
+        <p>Ask me anything!</p>
+    </div>
+</body>
+</html>
