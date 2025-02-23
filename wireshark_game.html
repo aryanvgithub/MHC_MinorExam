@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireshark Basics Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #121212;
+            color: #e0e0e0;
+            text-align: center;
+        }
+        .game-container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .options button:hover {
+            background: #ff9800;
+            color: #121212;
+        }
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff9800;
+            color: #121212;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Wireshark Basics Game</h1>
+        <div class="question">
+            <p>What is the primary purpose of Wireshark?</p>
+        </div>
+        <div class="options">
+            <button onclick="checkAnswer(true)">Analyze network traffic</button>
+            <button onclick="checkAnswer(false)">Optimize CPU performance</button>
+            <button onclick="checkAnswer(false)">Debug Java applications</button>
+            <button onclick="checkAnswer(false)">Create web applications</button>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back to Learning Platform</button>
+    </div>
+
+    <script>
+        function checkAnswer(isCorrect) {
+            if (isCorrect) {
+                alert("Correct! Wireshark is used to analyze network traffic.");
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
